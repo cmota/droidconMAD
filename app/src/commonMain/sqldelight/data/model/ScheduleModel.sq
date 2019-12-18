@@ -1,0 +1,18 @@
+import domain.model.Schedule;
+
+CREATE TABLE ScheduleModel (
+    id TEXT NOT NULL PRIMARY KEY,
+    schedule TEXT as Schedule NOT NULL
+);
+
+insertOrReplaceSchedule:
+INSERT OR REPLACE INTO ScheduleModel(id, schedule) VALUES (?, ?);
+
+updateSchedule:
+UPDATE ScheduleModel
+SET schedule = ?
+WHERE id = ?;
+
+selectAllSchedules:
+SELECT *
+FROM ScheduleModel;

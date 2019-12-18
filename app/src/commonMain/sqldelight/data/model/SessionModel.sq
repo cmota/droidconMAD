@@ -1,0 +1,18 @@
+import domain.model.Session;
+
+CREATE TABLE SessionModel (
+    id TEXT NOT NULL PRIMARY KEY,
+    session TEXT AS Session NOT NULL
+);
+
+insertOrReplaceSession:
+INSERT OR REPLACE INTO SessionModel(id, session) VALUES (?, ?);
+
+updateSession:
+UPDATE SessionModel
+SET session = ?
+WHERE id = ?;
+
+selectAllSessions:
+SELECT *
+FROM SessionModel;

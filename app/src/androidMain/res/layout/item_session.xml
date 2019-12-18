@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:id="@+id/ll_container"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/tv_talk_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_speaker_talk"
+            android:textSize="17sp"
+            android:textColor="?android:textColorPrimary"
+            android:fontFamily="@font/open_sans"/>
+
+    <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_filled_room"
+            android:drawablePadding="8dp"
+            android:text="@string/hint_session_time"
+            android:textSize="15sp"
+            android:textColor="?android:textColorSecondary"
+            android:fontFamily="monospace"/>
+</LinearLayout>

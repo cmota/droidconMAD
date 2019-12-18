@@ -1,0 +1,13 @@
+import domain.model.Speaker;
+
+CREATE TABLE SpeakerModel (
+    id TEXT NOT NULL PRIMARY KEY,
+    speaker TEXT as Speaker NOT NULL
+);
+
+insertOrReplaceSpeaker:
+INSERT OR REPLACE INTO SpeakerModel(id, speaker) VALUES (?, ?);
+
+selectAllSpeakers:
+SELECT *
+FROM SpeakerModel;

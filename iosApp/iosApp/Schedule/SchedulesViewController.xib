@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SchedulesViewController" customModule="iosApp" customModuleProvider="target">
+            <connections>
+                <outlet property="segmentedControl" destination="DVV-1d-jgH" id="gaV-p7-WXv"/>
+                <outlet property="tableView" destination="yae-ue-0NG" id="lr4-uQ-9fA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="meP-EV-dJP">
+                    <rect key="frame" x="197" y="443" width="20" height="20"/>
+                </activityIndicatorView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DVV-1d-jgH">
+                    <rect key="frame" x="107" y="49" width="200" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="YFs-Qz-xUq"/>
+                    </constraints>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentedControlValueChanged:" destination="-1" eventType="valueChanged" id="SZc-Yh-2Xt"/>
+                    </connections>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yae-ue-0NG">
+                    <rect key="frame" x="0.0" y="82" width="414" height="780"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="GFt-RC-xw1"/>
+                        <outlet property="delegate" destination="-1" id="Hmi-TN-3ga"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yae-ue-0NG" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="0UP-c3-zSg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DVV-1d-jgH" secondAttribute="trailing" id="6xT-bj-cDh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yae-ue-0NG" secondAttribute="trailing" id="AsZ-SB-K8p"/>
+                <constraint firstItem="DVV-1d-jgH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="B17-44-J9d"/>
+                <constraint firstItem="meP-EV-dJP" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="GB4-0b-c5k"/>
+                <constraint firstItem="DVV-1d-jgH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NVI-2j-cHc"/>
+                <constraint firstItem="yae-ue-0NG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OU2-sP-z8C"/>
+                <constraint firstItem="DVV-1d-jgH" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="PoE-v4-D9C"/>
+                <constraint firstItem="yae-ue-0NG" firstAttribute="top" secondItem="DVV-1d-jgH" secondAttribute="bottom" constant="5" id="lOB-Ph-KJE"/>
+                <constraint firstItem="meP-EV-dJP" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="q7E-Dw-kCq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="104.46428571428571"/>
+        </view>
+    </objects>
+</document>

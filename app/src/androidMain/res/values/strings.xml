@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">droidcon Madrid</string>
+
+    <!-- toolbar -->
+    <string name="toolbar_schedule">Schedule</string>
+    <string name="toolbar_favourites">Favourites</string>
+    <string name="toolbar_speakers">Speakers</string>
+    <string name="toolbar_venue">#dcMadrid19</string>
+
+    <!-- navigation -->
+    <string name="navigation_schedule">Schedule</string>
+    <string name="navigation_favourites">Favourites</string>
+    <string name="navigation_speakers">Speakers</string>
+    <string name="navigation_venue">Venue</string>
+
+    <!-- content -->
+    <string name="schedule_loading">Loading data…</string>
+    <string name="schedule_empty">No schedule information. Swipe to refresh.</string>
+
+    <string name="favourites_empty">No favourite talks</string>
+
+    <string name="speakers_loading">Loading data…</string>
+    <string name="speakers_empty">No speakers information. Swipe to refresh.</string>
+
+    <string name="venue_location">Universidad Complutense de Madrid,
+        Facultad de Informática,
+        Calle del Prof. José García Santesmases, 9,
+        28040 Madrid
+    </string>
+    <string name="venue_maps">Map</string>
+    <string name="venue_maps_link">https://www.google.com/maps/place/UCM+Facultad+de+Inform%C3%A1tica/@40.4527655,-3.7357,17z/data=!3m2!4b1!5s0xd4229d2abcb6a23:0x64e12201f58471a0!4m5!3m4!1s0xd4229d2a9f08b1f:0xcf68cce94ec84cb8!8m2!3d40.4527655!4d-3.7335113</string>
+    <string name="venue_website">Website</string>
+    <string name="venue_website_link">https://www.madrid.droidcon.com/</string>
+    <string name="venue_twitter">Twitter</string>
+    <string name="venue_twitter_link">https://twitter.com/droidconMad</string>
+
+    <string name="venue_information">Information</string>
+    <string name="venue_information_description">droidcon Madrid will take place at Universidad Complutense de Madrid, Facultad de Informática.</string>
+
+    <string name="app_title">droidcon Madrid App</string>
+    <string name="app_description">This application was made for droidcon Madrid 2019 as a showcase of the potential of Kotlin Multiplatform. \n\nYou can find the project on <a href="https://github.com/cmota/droidconMAD">GitHub</a> or DM me directly on <a href="https://twitter.com/cafonsomota">Twitter</a></string>
+
+    <string name="talk_duration">%1$s - %2$s</string>
+    <string name="talk_duration_not_available">Time not available</string>
+
+    <string name="talk_time_and_room">%1$s / %2$s</string>
+
+    <string name="speaker_events">Events</string>
+    <string name="session_speakers">Speakers</string>
+
+    <!-- content description -->
+    <string name="hint_speaker_bio">Speaker Bio</string>
+    <string name="hint_speaker_image">Speaker Image</string>
+    <string name="hint_speaker_name">Speaker Name</string>
+    <string name="hint_speaker_talk">Speaker Talk</string>
+
+    <string name="hint_session_title">Session Title</string>
+    <string name="hint_session_description">Session Description</string>
+    <string name="hint_session_time">Session Time</string>
+    <string name="hint_session_room">Session Room</string>
+    <string name="hint_session_type">Session Type</string>
+    <string name="hint_session_timeslot">08:00</string>
+    <string name="hint_session_category">Category</string>
+    <string name="hint_session_placeholder">8:00 AM - 8:40 AM</string>
+    <string name="hint_session_add_to_favourites">Add to favourites</string>
+
+    <string name="hint_event_image">Event image</string>
+</resources>

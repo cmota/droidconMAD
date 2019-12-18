@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+    <ImageView
+            android:id="@+id/iv_speaker_photo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/hint_speaker_image"/>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/iv_speaker_photo"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/tv_speaker_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:text="@string/hint_speaker_name"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="?android:textColorPrimary"
+                android:fontFamily="@font/open_sans"/>
+
+        <TextView
+                android:id="@+id/tv_speaker_talk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="@string/hint_speaker_talk"
+                android:textSize="15sp"
+                android:textColor="?android:textColorSecondary"
+                android:fontFamily="@font/open_sans"/>
+    </LinearLayout>
+</RelativeLayout>

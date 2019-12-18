@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+        <ImageView
+                android:id="@+id/iv_speaker_photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                android:contentDescription="@string/hint_speaker_image" />
+
+        <TextView
+                android:id="@+id/tv_speaker_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="@string/hint_speaker_name"
+                android:textSize="25sp"
+                android:textColor="?android:textColorPrimary"
+                android:fontFamily="@font/open_sans"/>
+
+        <TextView
+                android:id="@+id/tv_speaker_bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/hint_speaker_bio"
+                android:textSize="17sp"
+                android:textColor="?android:textColorPrimary"
+                android:fontFamily="@font/open_sans"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/speaker_events"
+                android:textAllCaps="true"
+                android:textSize="17sp"
+                android:textColor="?android:textColorSecondary"
+                android:textStyle="bold"
+                android:fontFamily="@font/open_sans"/>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+    <TextView
+            android:id="@+id/tv_timeslot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:text="@string/hint_session_timeslot"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/open_sans"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_timeslot"
+            android:layout_toStartOf="@+id/iv_favourite"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/tv_talk_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_speaker_talk"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="?android:textColorPrimary"
+                android:fontFamily="@font/open_sans"/>
+
+        <TextView
+                android:id="@+id/tv_talk_speaker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="@string/hint_speaker_name"
+                android:textSize="15sp"
+                android:textColor="?android:textColorSecondary"
+                android:fontFamily="@font/open_sans"/>
+
+        <TextView
+                android:id="@+id/tv_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:drawableStart="@drawable/ic_filled_room"
+                android:text="@string/hint_session_room"
+                android:textSize="15sp"
+                android:textColor="?android:textColorSecondary"
+                android:textStyle="normal"
+                android:fontFamily="monospace"/>
+    </LinearLayout>
+
+    <ImageView
+            android:id="@+id/iv_favourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_selector_heart"
+            android:contentDescription="@string/hint_session_add_to_favourites"/>
+</RelativeLayout>

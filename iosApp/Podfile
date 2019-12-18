@@ -1,0 +1,6 @@
+platform :ios, '8.0'
+use_modular_headers!
+
+target 'iosApp' do
+  pod 'SDWebImage', '~> 5.1'
+end
