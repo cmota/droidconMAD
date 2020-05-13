@@ -9,8 +9,8 @@ iosApp/DerivedData/
 .idea/*
 .gradle/*
 app/*.iml
-app/.idea
-app/build
+app/.idea/*
+app/build/*
 app/local.properties
 app/release
 build/*
