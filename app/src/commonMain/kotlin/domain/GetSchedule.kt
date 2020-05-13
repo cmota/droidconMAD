@@ -7,7 +7,6 @@ import domain.model.Schedule
 import domain.model.Session
 import domain.model.toSchedule
 import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.launch
 
 class GetSchedule(private val sessionizeAPI: SessionizeAPI, private val scheduleDao: ScheduleDao, private val sessionDao: SessionDao) {
 

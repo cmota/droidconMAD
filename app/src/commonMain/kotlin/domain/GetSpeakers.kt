@@ -1,8 +1,8 @@
 package domain
 
 import data.SessionizeAPI
-import domain.model.Speaker
 import domain.dao.SpeakerDao
+import domain.model.Speaker
 import domain.model.toSpeaker
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch

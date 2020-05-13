@@ -1,9 +1,9 @@
 package presentation.activities
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.droidcon.madrid.R
-import android.support.v4.app.Fragment
 import kotlinx.android.synthetic.main.activity_main.*
 import presentation.fragments.FavouritesFragment
 import presentation.fragments.SpeakerFragment
@@ -11,7 +11,6 @@ import presentation.fragments.TabFragment
 import presentation.fragments.VenueFragment
 import utils.EXTRA_TAB_SELECTED
 import utils.EXTRA_TAB_TITLE
-import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,8 +28,8 @@ class MainActivity : AppCompatActivity() {
         setupBottomBarActions(selectedTabId)
     }
 
-    override fun onSaveInstanceState(outState: Bundle?) {
-        outState?.putInt(EXTRA_TAB_SELECTED, bnv_navigation.selectedItemId)
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt(EXTRA_TAB_SELECTED, bnv_navigation.selectedItemId)
         super.onSaveInstanceState(outState)
     }
 

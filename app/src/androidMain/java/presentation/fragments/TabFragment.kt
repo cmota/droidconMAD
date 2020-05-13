@@ -2,11 +2,11 @@ package presentation.fragments
 
 import ServiceLocator
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.droidcon.madrid.R
 import domain.model.Schedule
 import domain.model.Speaker

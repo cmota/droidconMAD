@@ -1,5 +1,5 @@
 import com.squareup.sqldelight.db.SqlDriver
-import com.squareup.sqldelight.drivers.ios.NativeSqliteDriver
+import com.squareup.sqldelight.drivers.native.NativeSqliteDriver
 import data.ScheduleDb
 import data.createDatabase
 import io.ktor.client.engine.HttpClientEngine

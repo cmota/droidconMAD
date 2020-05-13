@@ -1,20 +1,21 @@
 package presentation.fragments
 
+import ServiceLocator
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.fragment_schedule.*
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.droidcon.madrid.R
 import domain.AppData
 import domain.model.Schedule
 import domain.model.Session
-import presentation.adapters.ScheduleListAdapter
+import kotlinx.android.synthetic.main.fragment_schedule.*
 import presentation.activities.SessionActivity
+import presentation.adapters.ScheduleListAdapter
 import presentation.cb.IOnUserSessionAction
 import presentation.cb.IScheduleData
 import utils.EXTRA_SCHEDULE_DAY
@@ -28,7 +29,6 @@ class ScheduleFragment : Fragment(), IScheduleData, IOnUserSessionAction {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
         setup()
     }
 
@@ -38,7 +38,6 @@ class ScheduleFragment : Fragment(), IScheduleData, IOnUserSessionAction {
 
     override fun onResume() {
         super.onResume()
-
         if (isVisible) {
             val sessions = getSessionsFromSchedule(AppData.schedule)
             if (sessions.isNotEmpty()) {
@@ -50,7 +49,6 @@ class ScheduleFragment : Fragment(), IScheduleData, IOnUserSessionAction {
 
     override fun onDetach() {
         super.onDetach()
-
         presenterSchedule.detachView()
     }
 
@@ -89,15 +87,19 @@ class ScheduleFragment : Fragment(), IScheduleData, IOnUserSessionAction {
     }
 
     private fun onDataFailed() {
-        tv_no_data.visibility = View.VISIBLE
-        tv_no_data.text = getString(R.string.schedule_empty)
+        activity!!.runOnUiThread {
+            tv_no_data.visibility = View.VISIBLE
+            tv_no_data.text = getString(R.string.schedule_empty)
 
-        rv_content.visibility = View.GONE
+            rv_content.visibility = View.GONE
+        }
     }
 
     private fun onDataSuccess() {
-        tv_no_data.visibility = View.GONE
-        rv_content.visibility = View.VISIBLE
+        activity!!.runOnUiThread {
+            tv_no_data.visibility = View.GONE
+            rv_content.visibility = View.VISIBLE
+        }
     }
 
     //region IScheduleData

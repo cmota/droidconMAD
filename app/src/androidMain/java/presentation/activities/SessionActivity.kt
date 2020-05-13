@@ -2,22 +2,20 @@ package presentation.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.AppBarLayout
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.droidcon.madrid.R
+import com.google.android.material.appbar.AppBarLayout
 import domain.AppData
 import domain.model.Session
 import domain.model.Speaker
 import kotlinx.android.synthetic.main.activity_session.*
-import kotlinx.android.synthetic.main.activity_session.appbar
-import kotlinx.android.synthetic.main.activity_session.collapsing_toolbar
-import kotlinx.android.synthetic.main.activity_session.rv_content
-import kotlinx.android.synthetic.main.activity_session.toolbar
 import presentation.adapters.SpeakerListAdapter
 import presentation.cb.IOnUserSpeakerAction
-import utils.*
+import utils.EXTRA_SESSION_ID
+import utils.EXTRA_SPEAKER_ID
+import utils.Utils
 import kotlin.math.abs
 
 class SessionActivity : AppCompatActivity(), IOnUserSpeakerAction {
@@ -26,8 +24,8 @@ class SessionActivity : AppCompatActivity(), IOnUserSpeakerAction {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_session)
 
-        val sessionId = intent.extras.getString(EXTRA_SESSION_ID)
-        val session = AppData.getSessionById(sessionId)
+        val sessionId = intent.extras!!.getString(EXTRA_SESSION_ID)
+        val session = AppData.getSessionById(sessionId!!)
 
         setup(session)
     }
@@ -48,7 +46,7 @@ class SessionActivity : AppCompatActivity(), IOnUserSpeakerAction {
             } else {
                 collapsing_toolbar.title = ""
             }
-        });
+        })
 
         tv_talk_title.text = session.title
         tv_talk_schedule.text = getString(R.string.talk_duration,

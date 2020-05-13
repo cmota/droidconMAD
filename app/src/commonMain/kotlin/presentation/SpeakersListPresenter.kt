@@ -2,7 +2,6 @@ package presentation
 
 import domain.GetSpeakers
 import domain.defaultDispatcher
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import presentation.cb.ISpeakersData
 import kotlin.coroutines.CoroutineContext

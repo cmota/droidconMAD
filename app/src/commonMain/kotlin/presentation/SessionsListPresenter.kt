@@ -2,7 +2,6 @@ package presentation
 
 import domain.GetSessions
 import domain.defaultDispatcher
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import presentation.cb.ISessionsData
 import kotlin.coroutines.CoroutineContext

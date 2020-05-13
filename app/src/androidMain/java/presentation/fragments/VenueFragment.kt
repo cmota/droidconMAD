@@ -1,23 +1,22 @@
 package presentation.fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.droidcon.madrid.R
+import com.google.android.material.appbar.AppBarLayout
 import kotlinx.android.synthetic.main.fragment_venue.*
-import android.content.Intent
-import android.net.Uri
-import android.text.method.LinkMovementMethod
-import android.support.design.widget.AppBarLayout
 import kotlin.math.abs
 
 class VenueFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
         setup()
     }
 
@@ -32,7 +31,7 @@ class VenueFragment : Fragment() {
             } else {
                 collapsing_toolbar.title = ""
             }
-        });
+        })
 
         tv_location.setOnClickListener {
             openMaps()

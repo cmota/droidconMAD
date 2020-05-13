@@ -1,18 +1,18 @@
 package presentation.adapters
 
-import android.support.v7.util.DiffUtil
-import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.item_schedule.view.*
-import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
 import com.droidcon.madrid.R
 import domain.model.Category
 import domain.model.Info
 import domain.model.Session
+import kotlinx.android.synthetic.main.item_schedule.view.*
 import presentation.cb.IOnUserSessionAction
 import utils.Utils
 
@@ -92,21 +92,12 @@ class ScheduleListAdapter(private var sessions: List<Session>, private val actio
     }
 
     private fun getSpeakersName(speakers: List<Info>): String {
-        var speakersName: String = ""
+        var speakersName = ""
         for (info in speakers) {
             speakersName += "${info.name}, "
         }
 
         return speakersName.substringBeforeLast(", ")
-    }
-
-    private fun getCategories(categories: List<Category>): String {
-        var categoriesList: String = ""
-        for (category in categories) {
-            categoriesList += "${category.name}, "
-        }
-
-        return categoriesList.substringBeforeLast(", ")
     }
 
     class SessionViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

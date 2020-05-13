@@ -2,7 +2,6 @@ package presentation
 
 import domain.GetSchedule
 import domain.defaultDispatcher
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import presentation.cb.IScheduleData
 import kotlin.coroutines.CoroutineContext

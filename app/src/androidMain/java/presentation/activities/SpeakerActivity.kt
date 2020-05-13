@@ -2,9 +2,9 @@ package presentation.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.droidcon.madrid.R
@@ -12,10 +12,10 @@ import domain.AppData
 import domain.model.Session
 import domain.model.Speaker
 import kotlinx.android.synthetic.main.activity_speaker.*
-import kotlinx.android.synthetic.main.activity_speaker.rv_content
 import presentation.adapters.SessionListAdapter
 import presentation.cb.IOnUserSessionAction
-import utils.*
+import utils.EXTRA_SESSION_ID
+import utils.EXTRA_SPEAKER_ID
 
 class SpeakerActivity : AppCompatActivity(), IOnUserSessionAction {
 
@@ -23,8 +23,8 @@ class SpeakerActivity : AppCompatActivity(), IOnUserSessionAction {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_speaker)
 
-        val speakerId = intent.extras.getString(EXTRA_SPEAKER_ID)
-        setup(AppData.getSpeakerById(speakerId))
+        val speakerId = intent.extras!!.getString(EXTRA_SPEAKER_ID)
+        setup(AppData.getSpeakerById(speakerId!!))
     }
 
     override fun onSupportNavigateUp(): Boolean {

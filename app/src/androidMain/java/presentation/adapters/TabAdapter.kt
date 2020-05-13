@@ -1,11 +1,12 @@
 package presentation.adapters
 
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentStatePagerAdapter
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentStatePagerAdapter
 import utils.EXTRA_TAB_TITLE
 
-class TabAdapter(fragmentManager : FragmentManager, private val fragments: List<Fragment>) : FragmentStatePagerAdapter(fragmentManager) {
+class TabAdapter(fragmentManager : FragmentManager, private val fragments: List<Fragment>) :
+    FragmentStatePagerAdapter(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
     override fun getItem(position: Int): Fragment {
         return fragments[position]

@@ -1,5 +1,6 @@
 package domain
 
+import ServiceLocator
 import domain.model.Schedule
 import domain.model.Session
 import domain.model.Speaker
